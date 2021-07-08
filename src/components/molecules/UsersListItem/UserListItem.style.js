@@ -15,7 +15,7 @@ export const Wrapper = styled.li`
   }
 `;
 
-export const Average = styled.div`
+export const StyledAverage = styled.div`
   height: 34px;
   width: 34px;
   border-radius: 50px;
@@ -30,18 +30,18 @@ export const Average = styled.div`
   }};
 `;
 
-export const ListElementContent = styled.div`
+export const StyledContent = styled.div`
   margin: 0 14px 0 24px;
 `;
 
-export const Header = styled.p`
+export const StyledHeader = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.darkGrey};
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: 700;
 `;
 
-export const Attendace = styled.p`
+export const StyledAttendace = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.darkGrey};
   font-size: ${({ theme }) => theme.fontSize.s};

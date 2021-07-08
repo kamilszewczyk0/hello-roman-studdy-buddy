@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Wrapper, Average, Header, Attendace, ListElementContent } from './UserListItem.style';
+import { Wrapper, StyledAverage, StyledHeader, StyledAttendace, StyledContent } from './UserListItem.style';
 import Button from 'components/atoms/Button/Button';
 
-const UsersListitem = ({ userData: { average, name, attendance = '0%' } }) => (
+const showIndex = (index) => alert(`To jest student #${index + 1}`);
+
+const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper key={name}>
-    <Average>{average}</Average>
-    <ListElementContent>
-      <Header>{name}</Header>
-      <Attendace>attendance: {attendance}</Attendace>
-    </ListElementContent>
-    <Button />
+    <StyledAverage>{average}</StyledAverage>
+    <StyledContent>
+      <StyledHeader>{name}</StyledHeader>
+      <StyledAttendace>attendance: {attendance}</StyledAttendace>
+    </StyledContent>
+    <Button onMouseEnter={() => showIndex(index)} />
   </Wrapper>
 );
 
-UsersListitem.propTypes = {
+UsersListItem.propTypes = {
   userData: PropTypes.shape({
     average: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -22,4 +24,4 @@ UsersListitem.propTypes = {
   }),
 };
 
-export default UsersListitem;
+export default UsersListItem;
