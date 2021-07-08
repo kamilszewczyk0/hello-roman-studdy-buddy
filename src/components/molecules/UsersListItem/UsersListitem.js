@@ -12,7 +12,7 @@ const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }
       <StyledHeader>{name}</StyledHeader>
       <StyledAttendace>attendance: {attendance}</StyledAttendace>
     </StyledContent>
-    <Button onMouseEnter={() => showIndex(index)} />
+    <Button onClick={() => showIndex(index)} />
   </Wrapper>
 );
 
