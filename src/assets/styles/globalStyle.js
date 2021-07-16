@@ -13,6 +13,8 @@ html{
 
 body {
   font-family: 'Monserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a, button {
