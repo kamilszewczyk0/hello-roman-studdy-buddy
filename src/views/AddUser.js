@@ -4,6 +4,7 @@ import { Button } from 'components/atoms/Button/Button';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 import { Title } from 'components/atoms/Title/Title';
 import { UsersContext } from 'providers/UserProvider';
+import { useHistory } from 'react-router-dom';
 
 const initialFormState = {
   name: '',
@@ -14,6 +15,7 @@ const initialFormState = {
 const AddUser = () => {
   const [formValues, setFormValues] = useState(initialFormState);
   const { handleAddUser } = useContext(UsersContext);
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     setFormValues({
@@ -26,6 +28,7 @@ const AddUser = () => {
     e.preventDefault();
     handleAddUser(formValues);
     setFormValues(initialFormState);
+    history.push('/');
   };
 
   return (
