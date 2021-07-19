@@ -1,26 +1,26 @@
 export const users = [
   {
-    name: 'Kamil Szewczyk',
+    name: 'Kamil',
     attendance: '67%',
     average: '3.3',
   },
   {
-    name: 'Magdalena Kosztyła',
+    name: 'Magdalena',
     attendance: '37%',
     average: '2.9',
   },
   {
-    name: 'Aleksander Szewczyk',
+    name: 'Aleksander',
     attendance: '97%',
     average: '4.3',
   },
   {
-    name: 'Monika Kosztyła',
+    name: 'Monika',
     attendance: '100%',
     average: '4.5',
   },
   {
-    name: 'Aleksandra Byczek',
+    name: 'Aleksandra',
     attendance: '80%',
     average: '4.1',
   },
